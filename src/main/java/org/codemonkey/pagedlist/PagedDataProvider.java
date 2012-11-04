@@ -6,13 +6,13 @@ import java.util.List;
  * Provides the {@link PagedList} with a means to obtain pages of data. Can return the data itself, the page size to apply and how big the
  * total dataset is (ie. number of rows in a database).
  * 
+ * @author Benny Bottema
  * @param <TDto> See {@link #provide(int, Object)}.
  * @param <TQueryParameters> See {@link #provide(int, Object)}.
- * @author Benny Bottema
  */
 public interface PagedDataProvider<TDto, TQueryParameters> {
 	/**
-	 * Returns a subset of the total dataset, where the <code>page</code> parameters determines which subset (which page).
+	 * Returns a subset of the total data set, where the <code>page</code> parameters determines which subset (which page).
 	 * 
 	 * @param page Determines what subset of data is required.
 	 * @param queryParameters The same query parameters as when the list was created, so that the total subset remains consistently the
